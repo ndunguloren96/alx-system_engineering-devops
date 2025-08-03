@@ -1,7 +1,3 @@
 #!/bin/bash
-# Convert WATER to decimal
-wtr=$(echo "$WATER" | tr "ewatrsd" "0123456")
-# Convert STIR to decimal
-str=$(echo "$STIR" | tr "ti.r" "0123")
-# Use dc to add them and convert the output to base bestchol
-echo "16i 6o $wtr $str + p" | dc | tr "012345" "bchloes"
+wtr=$(echo "$WATER" | tr "ewatrsd" "0123456"); str=$(echo "$STIR" | tr "ti.r" "0123"); echo "7i 4o $wtr $str + p" | dc | tr "01234567" "bchloes"
+W=$(echo "$WATER" | tr "ewatrsd" "0123456"); S=$(echo "$STIR" | tr "ti.r" "0123"); echo "7i 4o $W $S + p" | dc | tr "0123456" "bchloes"

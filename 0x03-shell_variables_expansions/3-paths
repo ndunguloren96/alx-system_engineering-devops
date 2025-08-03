@@ -1,3 +1,2 @@
 #!/bin/bash
-echo $PATH | tr -s ":" "
-" | grep -v "^$" | wc -l
+echo "$PATH" | grep -oP "[^:]+" | wc -l
