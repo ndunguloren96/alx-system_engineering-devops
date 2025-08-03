@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PATH" | grep -oP "[^:]+" | wc -l
+IFS=: read -ra A <<< "$PATH"; echo "${#A[@]}"
